@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		:root{
+			--w:192px;
+		}
+		ul,li{
+			list-style: none;
+			margin:0;
+			padding:0;
+		}
+		#a{
+			width: 192px;
+			height: 168px;
+			overflow: hidden;
+		}
+		ul{
+			width:calc(var(--w)*4);
+			transition:  .5s;
+			clear:both;
+		}
+		li{
+			float: left;
+		}
+		#a:target ul{
+			transform: translate(0,0);
+		}
+		#b:target ul{
+			transform: translate(calc(var(--w)*-1),0);
+		}
+		#c:target ul{
+			transform: translate(calc(var(--w)*-2),0);
+		}
+		#d:target ul{
+			transform: translate(calc(var(--w)*-3),0);
+		}
+	</style>
+</head>
+<body>
+<div id="a">
+	<div id="b">
+		<div id="c">
+			<div id="d">
+				<ul class="a b c d">
+					<li><img src="http://pic51.nipic.com/file/20141031/8098773_204507657000_2.jpg" alt=""></li>
+					<li><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3323249715,914891285&fm=21&gp=0.jpg" alt=""></li>
+					<li><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3600837001,3667799962&fm=21&gp=0.jpg" alt=""></li>
+					<li><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=365047460,4058718492&fm=21&gp=0.jpg" alt=""></li>
+			</div>
+		</div>
+	</div>
+</div>
+<a href="#a">第一个</a>
+<a href="#b">第二个</a>
+<a href="#c">第三个</a>
+<a href="#d">第四个</a>
+</body>
+</html>

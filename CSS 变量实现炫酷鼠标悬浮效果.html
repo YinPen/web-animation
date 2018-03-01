@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./mouseHover.css">
+</head>
+<body>
+    <button class="button">
+        <span>Hover me I'm awesome</span>
+    </button>
+</body>
+<script>
+    /*
+        选中目标元素并监听用户鼠标划过的事件
+        计算鼠标相对于该元素的坐标
+        将坐标保存到 CSS 的变量中
+     */
+    document.querySelector('.button').onmousemove = (e) => {
+            const x = e.pageX - e.target.offsetLeft
+            const y = e.pageY - e.target.offsetTop
+            e.target.style.setProperty('--x', `${x}px`)
+            e.target.style.setProperty('--y', `${y}px`)
+
+        }
+</script>
+</html>
